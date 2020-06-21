@@ -3,7 +3,7 @@ const request = require('request');
 
 const breedName = process.argv[2];
 
-request(`https://ai.thecatapi.com/v1/breeds/search?q=${breedName}`, (err, res, body) => {
+request(`https://api.thecatapi.com/v1/breeds/search?q=${breedName}`, (err, res, body) => {
   if (err) {
     return console.log(err);
   }

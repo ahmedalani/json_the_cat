@@ -16,4 +16,12 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+  it('returns a string error for invalid breed, via callback', (done) => {
+    fetchBreedDescription('Siberianadafasf', (err, desc) => {
+      // we expect no error for this scenario
+      assert.equal(err, 'breed name invalid or not found');
+
+      done();
+    });
+  });
 });
